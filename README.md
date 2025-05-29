@@ -70,19 +70,6 @@ pip install numpy pandas matplotlib scikit-learn scipy
    - Подбор гиперпараметров (например, коэффициента регуляризации) с помощью `GridSearchCV`.
    - Сравнение производительности моделей на обучающей и тестовой выборках с использованием метрики MSE.
 
-## Пример использования
-
-```python
-# Создание синтетического датасета
-X = np.random.uniform(-5, 5, (300, 2))
-y = X.dot(np.random.normal(size=(2,))) + np.random.normal(0, 1, (300,))
-w_init = np.random.uniform(-2, 2, (2,))
-
-# Обучение модели с MSELoss
-loss = MSELoss()
-w_list = gradient_descent(w_init, X, y, loss, lr=0.01, n_iterations=100)
-plot_gd(w_list, X, y, loss)
-```
 
 ## Результаты
 
